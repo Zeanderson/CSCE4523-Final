@@ -8,7 +8,7 @@ import { useQuery } from "react-query";
 function getTeams() {
   return useQuery("teams", async () => {
     const response = await axios.get(
-      "https://mynfl-app-b0fbff89917d.herokuapp.com//getTeams"
+      "https://mynfl-app-b0fbff89917d.herokuapp.com/getTeams"
     );
     return response.data;
   });
@@ -17,7 +17,7 @@ function getTeams() {
 function getGames(teamId: number) {
   return useQuery("games", async () => {
     const response = await axios.get(
-      `https://mynfl-app-b0fbff89917d.herokuapp.com//${teamId}`
+      `https://mynfl-app-b0fbff89917d.herokuapp.com/${teamId}`
     );
     return response.data;
   });

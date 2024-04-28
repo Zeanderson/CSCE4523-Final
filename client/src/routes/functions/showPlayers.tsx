@@ -17,7 +17,7 @@ function getTeams() {
 function getPlayers(teamId: number) {
   return useQuery("players", async () => {
     const response = await axios.get(
-      `https://mynfl-app-b0fbff89917d.herokuapp.com//getPlayers/${teamId}`
+      `https://mynfl-app-b0fbff89917d.herokuapp.com/getPlayers/${teamId}`
     );
     return response.data;
   });

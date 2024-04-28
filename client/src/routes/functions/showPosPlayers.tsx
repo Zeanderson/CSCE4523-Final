@@ -7,7 +7,7 @@ import { useQuery } from "react-query";
 function getPositions() {
   return useQuery("positions", async () => {
     const response = await axios.get(
-      "https://mynfl-app-b0fbff89917d.herokuapp.com//getPositions"
+      "https://mynfl-app-b0fbff89917d.herokuapp.com/getPositions"
     );
     return response.data;
   });
