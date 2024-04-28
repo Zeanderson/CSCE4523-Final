@@ -11,7 +11,7 @@ function addPlayerAPI(
   playerName: string,
   playerPos: string
 ) {
-  return axios.get(`http://127.0.0.1:5000/addPlayer`, {
+  return axios.get(`https://mynfl-app-b0fbff89917d.herokuapp.com/addPlayer`, {
     params: {
       playerId,
       teamId,

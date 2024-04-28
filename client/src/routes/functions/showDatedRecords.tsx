@@ -8,7 +8,7 @@ import axios from "axios";
 function getGames(date: string) {
   return useQuery("games", async () => {
     const response = await axios.get(
-      `http://127.0.0.1:5000/showDatedRecords?date=${date}`
+      `https://mynfl-app-b0fbff89917d.herokuapp.com/showDatedRecords?date=${date}`
     );
     return response.data;
   });

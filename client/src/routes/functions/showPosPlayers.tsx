@@ -6,7 +6,9 @@ import { useQuery } from "react-query";
 
 function getPositions() {
   return useQuery("positions", async () => {
-    const response = await axios.get("http://127.0.0.1:5000/getPositions");
+    const response = await axios.get(
+      "https://mynfl-app-b0fbff89917d.herokuapp.com//getPositions"
+    );
     return response.data;
   });
 }
@@ -14,7 +16,7 @@ function getPositions() {
 function getPosPlayers(pos: string) {
   return useQuery("posPlayers", async () => {
     const response = await axios.get(
-      `http://127.0.0.1:5000/showPosPlayers?playerPos=${pos}`
+      `https://mynfl-app-b0fbff89917d.herokuapp.com/showPosPlayers?playerPos=${pos}`
     );
     return response.data;
   });

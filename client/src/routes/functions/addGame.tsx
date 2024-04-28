@@ -13,7 +13,7 @@ function addGameAPI(
   score2: string,
   gameDate: string
 ) {
-  return axios.get(`http://127.0.0.1:5000/addGame`, {
+  return axios.get(`https://mynfl-app-b0fbff89917d.herokuapp.com/addGame`, {
     params: {
       gameId,
       team1Id,

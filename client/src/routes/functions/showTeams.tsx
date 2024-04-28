@@ -6,7 +6,9 @@ import { useQuery } from "react-query";
 
 function getTeamData() {
   return useQuery("allTeams", async () => {
-    const response = await axios.get("http://127.0.0.1:5000/showTeams");
+    const response = await axios.get(
+      "https://mynfl-app-b0fbff89917d.herokuapp.com//showTeams"
+    );
     return response.data;
   });
 }
